@@ -8,12 +8,12 @@
 /* Global */
 body {
   background-color: #1d1d1d;
-  color: #ddd; /* Cor de texto suave */
-  font-family: Arial, sans-serif;
+  color: #ddd;
+  font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.6;
 }
 
-/* Contêiner centralizado com margens controladas */
+/* Contêiner centralizado */
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -26,12 +26,7 @@ header {
   padding: 20px 50px;
   margin-bottom: 20px;
   text-align: center;
-}
-
-header .logo {
-  width: 120px;
-  image-rendering: pixelated;
-  margin-bottom: 10px;
+  position: relative;
 }
 
 header h1 {
@@ -41,7 +36,17 @@ header h1 {
 
 header p {
   font-size: 1.2em;
-  
+}
+
+/* Ícone de Início */
+.home-icon {
+  width: 90px;
+  height: 80px;
+  vertical-align: middle;
+  margin-right: 8px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 /* Barra de Navegação */
@@ -52,6 +57,7 @@ header p {
   justify-content: center;
   gap: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .navbar .nav-link {
@@ -73,7 +79,7 @@ main {
   padding: 20px;
 }
 
-/* Introdução */
+/* Seção Introdução */
 .intro {
   text-align: center;
   padding: 20px;
@@ -103,25 +109,56 @@ main {
   transform: scale(1.05);
 }
 
-/* Seção da História do Jogo */
-.game-story {
+/* Seções Sobre e Contato */
+.game-story, .contato {
   background-color: #2a2a2a;
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
 }
 
-.game-story h2 {
+.game-story h2, .contato h2 {
   font-size: 1.8em;
   margin-bottom: 10px;
   text-align: center;
   color: #ff9800;
 }
 
-.game-story p {
+.game-story p, .contato p {
   font-size: 1em;
   margin: 10px 0;
-  text-align: justify;
+  text-align: center;
+}
+
+/* Formulário de Contato */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input, form textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+form button {
+  background-color: #ff9800;
+  color: #222;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #e68900;
 }
 
 /* Rodapé */
@@ -133,9 +170,16 @@ footer {
   margin-top: 20px;
 }
 
-  .home-icon {
-    width: 90px;
-    height: 80px;
-    vertical-align: middle;
-    margin-right: 8px;
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
   }
+  header {
+    padding: 20px 20px;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}

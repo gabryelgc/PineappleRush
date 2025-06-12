@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pineapple Rush - Contato</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html">
+        <img src="logo.png" alt="Ícone de início" class="home-icon">
+      </a>
+      <h1>Pineapple Rush</h1>
+      <p>Entre em contato conosco</p>
+    </header>
+    
+    <!-- Barra de Navegação (opcional para a página de contato) -->
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Início</a>
+      <a href="index.html#sobre" class="nav-link">Sobre</a>
+      <a href="contato.html" class="nav-link active">Contato</a>
+      <a href="https://github.com/GabryelGC/PineappleRush" class="nav-link" target="_blank">GitHub</a>
+    </nav>
+    
+    <main>
+      <section class="contato">
+        <h2>Contato</h2>
+        <p>Envie sua mensagem:</p>
+        <form id="contactForm">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+          
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+          
+          <button type="submit">Enviar</button>
+          <p id="formMessage"></p>
+        </form>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 Pineapple Rush - Todos os direitos reservados.</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Validação simples do formulário de contato
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      let nome = document.getElementById('nome').value.trim();
+      let email = document.getElementById('email').value.trim();
+      let mensagem = document.getElementById('mensagem').value.trim();
+      let formMessage = document.getElementById('formMessage');
+      
+      if (!nome || !email || !mensagem) {
+        formMessage.style.color = 'red';
+        formMessage.textContent = 'Preencha todos os campos obrigatórios.';
+        return;
+      }
+      
+      // Simulação de envio
+      formMessage.style.color = 'green';
+      formMessage.textContent = 'Mensagem enviada com sucesso!';
+      
+      // Limpar o formulário
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+</body>
+</html>
