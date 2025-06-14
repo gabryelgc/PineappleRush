@@ -23,14 +23,14 @@ body {
 /* Cabeçalho */
 header {
   background-color: #ff9800;
-  padding: 20px 50px;
+  padding: 40px 50px;
   margin-bottom: 20px;
   text-align: center;
   position: relative;
 }
 
 header h1 {
-  font-size: 2.2em;
+  font-size: 1.3em;
   margin-bottom: 10px;
 }
 
@@ -40,13 +40,13 @@ header p {
 
 /* Ícone de Início */
 .home-icon {
-  width: 90px;
-  height: 80px;
+  width: 70px;
+  height: 60px;
   vertical-align: middle;
   margin-right: 8px;
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 6px;
+  left: -0px;
 }
 
 /* Barra de Navegação */
